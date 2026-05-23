@@ -2240,45 +2240,27 @@ footer{
 
     nav{
 
-    position:absolute;
+        position:absolute;
 
-    top:100px;
+        top:100%;
+        right:0;
 
-    right:20px;
+        width:220px;
 
-    width:220px;
+        background:white;
 
-    background:white;
+        border-radius:20px;
 
-    border-radius:24px;
+        padding:25px;
 
-    padding:25px;
+        flex-direction:column;
 
-    display:flex;
+        gap:20px;
 
-    flex-direction:column;
+        display:none;
 
-    gap:20px;
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transform:translateY(-10px);
-
-    transition:0.3s ease;
-
-    z-index:9999;
-}
-
-nav.active{
-
-    opacity:1;
-
-    visibility:visible;
-
-    transform:translateY(0);
-}
+        box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    }
 
     nav.active{
 
@@ -3265,77 +3247,62 @@ body{
 
 }
 
-.menu-toggle{
-    position:relative;
-    z-index:10000;
-    cursor:pointer;
-}
-
-#menu-toggle{
-    position: relative !important;
-    z-index: 999999 !important;
-    pointer-events: auto !important;
-}
-
-header{
-    z-index: 999999 !important;
-}
-
-.navbar{
-    position: relative;
-    z-index: 999999 !important;
-}
-
-.hero,
-.hero-right,
-.hero-image-wrapper{
-    z-index: 1 !important;
-}
-
-.hero-right::before,
-.hero-right::after{
-    pointer-events:none;
-}
-
-.hero-image-wrapper{
-    pointer-events:none;
-}
-
-header{
-    position:fixed;
-    z-index:999999;
-}
+/* =================================
+   FORCE FIX HAMBURGER
+================================= */
 
 @media(max-width:768px){
 
-    #nav-menu{
+  #menu-toggle{
+    display:block !important;
+    position:relative !important;
+    z-index:9999999 !important;
+    cursor:pointer !important;
+    pointer-events:auto !important;
+  }
 
-        position:absolute;
+  #nav-menu{
 
-        top:90px;
+    position:fixed !important;
 
-        right:20px;
+    top:90px !important;
+    right:20px !important;
 
-        width:220px;
+    width:220px !important;
 
-        background:white;
+    background:#fff !important;
 
-        border-radius:20px;
+    border-radius:20px !important;
 
-        padding:25px;
+    padding:25px !important;
 
-        flex-direction:column;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:20px !important;
 
-        gap:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15) !important;
 
-        box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    opacity:0 !important;
+    visibility:hidden !important;
 
-        display:none;
-    }
+    pointer-events:none !important;
 
-    #nav-menu.active{
+    transform:translateY(-10px) !important;
 
-        display:flex !important;
-    }
+    transition:0.3s ease !important;
+
+    z-index:9999999 !important;
+  }
+
+  #nav-menu.active{
+
+    opacity:1 !important;
+
+    visibility:visible !important;
+
+    pointer-events:auto !important;
+
+    transform:translateY(0) !important;
+  }
 
 }
