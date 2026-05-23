@@ -762,3 +762,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+
+menuToggle.onclick = function () {
+
+    navMenu.classList.toggle("active");
+
+};

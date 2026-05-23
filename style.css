@@ -1901,19 +1901,19 @@ footer{
 }
 
 .close-modal{
+    background:none;
+    border:none;
+    outline:none;
+    box-shadow:none;
 
-    position:absolute;
+    width:auto;
+    height:auto;
 
-    top:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    right:25px;
-
-    font-size:32px;
-
-    cursor:pointer;
-
-    color:#111827;
-
+    color:#0f172a;
 }
 
 .modal-content h2{
@@ -2229,37 +2229,56 @@ footer{
     }
 
     .menu-toggle{
+    display:block;
+    font-size:30px;
+    color:#0f172a;
+    cursor:pointer;
 
-        display:block;
-
-        font-size:32px;
-
-        cursor:pointer;
-    }
+    position:relative;
+    z-index:2000;
+}
 
     nav{
 
-        position:absolute;
+    position:absolute;
 
-        top:100%;
-        right:0;
+    top:100px;
 
-        width:220px;
+    right:20px;
 
-        background:white;
+    width:220px;
 
-        border-radius:20px;
+    background:white;
 
-        padding:25px;
+    border-radius:24px;
 
-        flex-direction:column;
+    padding:25px;
 
-        gap:20px;
+    display:flex;
 
-        display:none;
+    flex-direction:column;
 
-        box-shadow:0 15px 40px rgba(0,0,0,0.08);
-    }
+    gap:20px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(-10px);
+
+    transition:0.3s ease;
+
+    z-index:9999;
+}
+
+nav.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+}
 
     nav.active{
 
@@ -2276,7 +2295,7 @@ footer{
 
         gap:60px;
 
-        padding:10px 25px 80px;
+        padding:140px 25px 80px;
     }
 
     .hero-buttons,
@@ -3095,148 +3114,228 @@ body{
 
 @media (max-width:768px){
 
-    /* DETAIL PROJECT MOBILE */
-
-    .project-detail,
     .project-modal-content{
-        padding:32px 24px;
-        border-radius:28px;
-        overflow-y: auto;
-    }
-
-    .project-detail h2,
-    .project-modal-content h2{
-        font-size:2rem;
-        line-height:1.2;
-        text-align:left;
-    }
-
-    .project-detail h3,
-    .project-modal-content h3{
-        font-size:1.3rem;
-        margin-bottom:18px;
-    }
-
-    .project-detail p,
-    .project-modal-content p{
-        font-size:1rem;
-        line-height:1.9;
-        color:#64748b;
-    }
-
-    /* LIST FEATURE */
-
-    .project-features{
-        margin-top:24px;
-        gap:14px;
-    }
-
-    .project-features li{
-        font-size:1rem;
-        line-height:1.8;
-        padding-left:6px;
-    }
-
-    /* BUTTON */
-
-    .project-links{
-        display:flex;
-        flex-direction:column;
-        gap:16px;
-        margin-top:30px;
-    }
-
-    .project-links a,
-    .project-btn,
-    .detail-btn{
-
         width:100%;
+        max-height:90vh;
 
+        overflow-y:auto;
+
+        padding:30px 20px;
+
+        border-radius:24px;
+
+        position:relative;
+    }
+
+    .close-modal{
+        position:absolute;
+
+        top:15px;
+        right:15px;
+
+        width:38px;
+        height:38px;
+
+        border:none;
+        border-radius:50%;
+
+        background:#0f172a;
+        color:white;
+
+        font-size:22px;
+
+        display:flex;
+        align-items:center;
         justify-content:center;
-
-        text-align:center;
-
-        padding:16px 22px;
-
-        border-radius:18px;
-
-        font-size:1rem;
-
-        font-weight:600;
-    }
-
-    /* TAGS */
-
-    .project-tech{
-        margin-top:28px;
-        gap:12px;
-    }
-
-    .project-tech span{
-        font-size:0.95rem;
-        padding:12px 18px;
-        border-radius:16px;
     }
 
 }
 
-@media (max-width: 768px){
+@media (max-width:768px){
 
-  .project-modal{
-      position: fixed;
-      inset: 0;
+    .navbar{
+        position: relative;
+        z-index: 2000;
+    }
 
-      width: 100%;
-      height: 100vh;
+    nav{
+    z-index:1999;
+}
 
-      overflow-y: auto;
+    .nav-toggle{
+        position: relative;
+        z-index: 10000;
+        pointer-events: auto;
+    }
 
-      padding: 20px;
+}
 
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
+@media(max-width:768px){
 
-      z-index: 9999;
-  }
+    section{
+        padding:55px 20px;
+    }
 
-  .project-modal-content{
-      position: relative;
+    .hero{
+        padding:120px 20px 40px;
+        gap:35px;
+    }
 
-      width: 100%;
-      max-width: 100%;
+    .hero-description{
+        line-height:1.7;
+    }
 
-      background: #fff;
+    .section-header{
+        margin-bottom:35px;
+    }
 
-      border-radius: 24px;
+    .projects{
+        padding-top:50px;
+    }
 
-      padding: 80px 24px 32px;
+}
 
-      overflow: visible;
-  }
+/* =========================
+   FINAL MOBILE FIX
+========================= */
 
-  .close-modal{
-      position: fixed;
+@media(max-width:768px){
 
-      top: 20px;
-      right: 20px;
+    section{
+        padding:55px 20px;
+    }
 
-      width: 45px;
-      height: 45px;
+    .hero{
+        padding:120px 20px 50px;
+        gap:35px;
+    }
 
-      border-radius: 50%;
+    .navbar{
+        position:relative;
+        z-index:2000;
+    }
 
-      background: #0f172a;
-      color: white;
+    .menu-toggle{
+        position:relative;
+        z-index:2001;
+    }
 
-      font-size: 1.5rem;
-      font-weight: bold;
+    nav{
+        z-index:1999;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        opacity:0;
+        pointer-events:none;
+        transform:translateY(-10px);
+        transition:0.3s ease;
 
-      z-index: 10000;
-  }
+        display:flex;
+    }
+
+    nav.active{
+        opacity:1;
+        pointer-events:auto;
+        transform:translateY(0);
+    }
+
+    .project-modal{
+        padding:20px;
+        align-items:flex-start;
+        overflow-y:auto;
+    }
+
+    .modal-content{
+        width:100%;
+        max-height:90vh;
+        overflow-y:auto;
+        padding:28px 22px;
+        margin-top:40px;
+        border-radius:24px;
+    }
+
+    .close-modal{
+        background:none;
+        border:none;
+        box-shadow:none;
+
+        top:15px;
+        right:18px;
+
+        z-index:9999;
+    }
+
+}
+
+.menu-toggle{
+    position:relative;
+    z-index:10000;
+    cursor:pointer;
+}
+
+#menu-toggle{
+    position: relative !important;
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+}
+
+header{
+    z-index: 999999 !important;
+}
+
+.navbar{
+    position: relative;
+    z-index: 999999 !important;
+}
+
+.hero,
+.hero-right,
+.hero-image-wrapper{
+    z-index: 1 !important;
+}
+
+.hero-right::before,
+.hero-right::after{
+    pointer-events:none;
+}
+
+.hero-image-wrapper{
+    pointer-events:none;
+}
+
+header{
+    position:fixed;
+    z-index:999999;
+}
+
+@media(max-width:768px){
+
+    #nav-menu{
+
+        position:absolute;
+
+        top:90px;
+
+        right:20px;
+
+        width:220px;
+
+        background:white;
+
+        border-radius:20px;
+
+        padding:25px;
+
+        flex-direction:column;
+
+        gap:20px;
+
+        box-shadow:0 15px 40px rgba(0,0,0,0.08);
+
+        display:none;
+    }
+
+    #nav-menu.active{
+
+        display:flex !important;
+    }
 
 }
