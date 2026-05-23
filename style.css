@@ -2751,3 +2751,138 @@ nav{
   }
 
 }
+
+/* ========================================
+   FINAL MOBILE FIX
+======================================== */
+
+/* supaya tidak overflow kanan kiri */
+html,
+body{
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* semua element aman */
+*{
+    box-sizing: border-box;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 768px){
+
+    /* container utama */
+    section,
+    .container,
+    .hero,
+    .hero-container,
+    .about-container,
+    .projects-container,
+    .experience-container,
+    .contact-container{
+        width: 100%;
+        max-width: 100%;
+        padding-left: 22px;
+        padding-right: 22px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    .navbar{
+        width: calc(100% - 24px);
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 18px 22px;
+        border-radius: 28px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* logo kiri */
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        max-width: 80%;
+    }
+
+    /* tulisan logo */
+    .logo h2,
+    .logo-text{
+        font-size: 1.9rem;
+        line-height: 1.1;
+    }
+
+    /* hamburger */
+    .menu-toggle{
+        margin-left: auto;
+        font-size: 2rem;
+        flex-shrink: 0;
+    }
+
+    /* HERO */
+    .hero{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* judul */
+    .hero-title{
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* subtitle */
+    .hero-subtitle{
+        width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* paragraph */
+    .hero-description,
+    .about-left p{
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        line-height: 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* social */
+    .social-links{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    /* stats */
+    .stats-container{
+        justify-content: center;
+        text-align: center;
+        gap: 28px;
+        flex-wrap: wrap;
+    }
+
+    /* gambar */
+    .hero-image{
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image img{
+        width: 100%;
+        max-width: 320px;
+    }
+
+}
