@@ -1,30 +1,3 @@
-/* =========================
-   TYPING EFFECT
-========================= */
-
-if(document.querySelector("#typing")){
-
-    new Typed("#typing", {
-
-        strings: [
-
-            "UI/UX Designer",
-            "Web Developer",
-            "Frontend Enthusiast",
-            "Creative Thinker"
-
-        ],
-
-        typeSpeed: 80,
-        backSpeed: 40,
-        backDelay: 1000,
-        loop: true
-
-    });
-
-}
-
-
 // ======================================
 // HEADER BLUR WHEN SCROLL
 // ======================================
@@ -715,20 +688,77 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 const menuToggle = document.getElementById("menu-toggle");
 
-const navLinks = document.getElementById("nav-links");
-
-menuToggle.addEventListener("click", () => {
-
-    navLinks.classList.toggle("active");
-
-});
-
-const menuToggle = document.getElementById("menu-toggle");
-
 const navMenu = document.getElementById("nav-menu");
 
 menuToggle.addEventListener("click", () => {
 
     navMenu.classList.toggle("active");
+
+});
+
+const texts = [
+  "Frontend Developer",
+  "UI/UX Designer",
+  "Web Developer",
+  "Creative Thinker"
+];
+
+let speed = 100;
+let textIndex = 0;
+let charIndex = 0;
+
+const typing = document.getElementById("typing");
+
+function typeEffect() {
+
+  if(charIndex < texts[textIndex].length){
+
+    typing.textContent += texts[textIndex].charAt(charIndex);
+
+    charIndex++;
+
+    setTimeout(typeEffect, speed);
+
+  }else{
+
+    setTimeout(eraseEffect, 1500);
+
+  }
+
+}
+
+function eraseEffect(){
+
+  if(charIndex > 0){
+
+    typing.textContent = texts[textIndex].substring(0,charIndex-1);
+
+    charIndex--;
+
+    setTimeout(eraseEffect, 50);
+
+  }else{
+
+    textIndex++;
+
+    if(textIndex >= texts.length){
+
+      textIndex = 0;
+
+    }
+
+    setTimeout(typeEffect, 300);
+
+  }
+
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  if(typing){
+
+    setTimeout(typeEffect, 500);
+
+  }
 
 });
