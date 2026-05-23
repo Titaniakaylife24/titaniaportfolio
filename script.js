@@ -686,16 +686,6 @@ const hiddenElements = document.querySelectorAll(".hidden");
 
 hiddenElements.forEach((el) => observer.observe(el));
 
-const menuToggle = document.getElementById("menu-toggle");
-
-const navMenu = document.getElementById("nav-menu");
-
-menuToggle.addEventListener("click", () => {
-
-    navMenu.classList.toggle("active");
-
-});
-
 const texts = [
   "Frontend Developer",
   "UI/UX Designer",
@@ -763,10 +753,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
 
-menuToggle.onclick = function () {
+if(menuToggle && navMenu){
 
-    navMenu.classList.toggle("active");
+    menuToggle.addEventListener("click", () => {
 
-};
+        console.log("CLICKED");
 
+        navMenu.classList.toggle("active");
+
+    });
+
+}

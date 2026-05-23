@@ -1878,6 +1878,8 @@ footer{
 
     animation:popup 0.3s ease;
 
+    z-index:10000000;
+
 }
 
 @keyframes popup{
@@ -3129,6 +3131,11 @@ body{
         display:flex;
         align-items:center;
         justify-content:center;
+
+        position:absolute;
+z-index:10000000;
+pointer-events:auto;
+cursor:pointer;
     }
 
 }
@@ -3304,5 +3311,229 @@ body{
 
     transform:translateY(0) !important;
   }
+
+}
+
+/* =========================
+   MOBILE NAVBAR FINAL
+========================= */
+
+@media(max-width:768px){
+
+    #nav-menu{
+        display:none;
+    }
+
+    #nav-menu.active{
+
+        display:flex !important;
+        flex-direction:column !important;
+
+        position:fixed !important;
+
+        top:90px !important;
+        right:20px !important;
+
+        width:220px !important;
+
+        background:white !important;
+
+        padding:25px !important;
+
+        border-radius:20px !important;
+
+        gap:20px !important;
+
+        z-index:999999 !important;
+
+        box-shadow:0 15px 40px rgba(0,0,0,0.15) !important;
+    }
+
+}
+
+/* =========================
+   SIMPLE MOBILE NAVBAR
+========================= */
+
+@media(max-width:768px){
+
+    #nav-menu{
+        display:none;
+    }
+
+    #nav-menu.active{
+
+        display:flex;
+
+        flex-direction:column;
+
+        position:fixed;
+
+        top:90px;
+        right:20px;
+
+        width:220px;
+
+        background:white;
+
+        padding:25px;
+
+        border-radius:20px;
+
+        gap:20px;
+
+        z-index:999999;
+
+        box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    }
+
+}
+
+@media(max-width:768px){
+
+  #nav-menu{
+      display:none;
+  }
+
+  #nav-menu.active{
+      display:flex;
+      flex-direction:column;
+  }
+
+}
+
+/* =========================
+   FINAL WORKING MOBILE NAVBAR
+========================= */
+
+#menu-toggle{
+    display:none;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    #menu-toggle{
+
+        display:block;
+
+        background:none;
+        border:none;
+
+        font-size:34px;
+
+        cursor:pointer;
+
+        color:#0f172a;
+
+        z-index:999999;
+
+        position:relative;
+    }
+
+    #nav-menu{
+
+        display:none;
+    }
+
+    #nav-menu.active{
+
+        display:flex;
+
+        flex-direction:column;
+
+        position:fixed;
+
+        top:95px;
+        right:20px;
+
+        width:220px;
+
+        background:white;
+
+        padding:25px;
+
+        border-radius:20px;
+
+        gap:20px;
+
+        z-index:999999;
+
+        box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    }
+
+}
+
+/* =========================
+   ABSOLUTE FINAL FIX
+========================= */
+
+header{
+    position:fixed !important;
+    z-index:9999 !important;
+    pointer-events:auto !important;
+}
+
+.navbar{
+    position:relative !important;
+    z-index:999999999 !important;
+    pointer-events:auto !important;
+    overflow:visible !important;
+}
+
+#menu-toggle{
+
+    position:relative !important;
+
+    z-index:999999999 !important;
+
+    pointer-events:auto !important;
+
+    cursor:pointer !important;
+}
+
+/* pastikan tidak ada layer nutup */
+.hero,
+.hero-right,
+.hero-image-wrapper,
+.hero-right::before,
+.hero-right::after{
+
+    z-index:1 !important;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    #nav-menu{
+
+        display:none;
+    }
+
+    #nav-menu.active{
+
+        display:flex !important;
+
+        flex-direction:column !important;
+
+        position:fixed !important;
+
+        top:90px !important;
+        right:20px !important;
+
+        width:220px !important;
+
+        background:white !important;
+
+        padding:25px !important;
+
+        border-radius:20px !important;
+
+        z-index:999999999 !important;
+
+        gap:20px !important;
+
+        box-shadow:0 15px 40px rgba(0,0,0,0.15) !important;
+    }
 
 }
