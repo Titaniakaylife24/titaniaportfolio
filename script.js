@@ -687,9 +687,10 @@ const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
 const texts = [
-  "Frontend Developer",
-  "UI/UX Designer",
   "Web Developer",
+  "UI/UX Designer",
+  "Frontend Developer",
+  "Digital Experience Enthusiast",
   "Creative Thinker"
 ];
 
