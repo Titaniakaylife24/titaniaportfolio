@@ -1,1079 +1,1301 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>
+  <!-- Primary Meta Tags -->
+  <title>Titania Kaylife Putri | Fullstack Developer & UI/UX Enthusiast</title>
+  <meta name="title" content="Titania Kaylife Putri | Fullstack Developer & UI/UX Enthusiast">
+  <meta name="description"
+    content="Personal portfolio of Titania Kaylife Putri — Information Systems Student at UPN Veteran Jawa Timur, Fullstack Developer, and UI/UX Designer crafting intuitive, modern digital experiences.">
+  <meta name="keywords"
+    content="Titania Kaylife Putri, Portfolio, Fullstack Developer, UI/UX Designer, Information Systems, UPN Veteran Jawa Timur, Web Developer, Flutter, Laravel">
+  <meta name="author" content="Titania Kaylife Putri">
+  <meta name="theme-color" content="#080c14">
 
-    Titania Kaylife Putri | Portfolio
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://titaniakaylife.vercel.app/">
+  <meta property="og:title" content="Titania Kaylife Putri | Fullstack Developer & UI/UX Enthusiast">
+  <meta property="og:description"
+    content="Explore selected projects, experience, tech stack, and digital innovations by Titania Kaylife Putri.">
+  <meta property="og:image" content="assets/image/titania-portfolio.jpg.jpeg">
 
-  </title>
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://titaniakaylife.vercel.app/">
+  <meta property="twitter:title" content="Titania Kaylife Putri | Fullstack Developer & UI/UX Enthusiast">
+  <meta property="twitter:description"
+    content="Explore selected projects, experience, tech stack, and digital innovations by Titania Kaylife Putri.">
+  <meta property="twitter:image" content="assets/image/titania-portfolio.jpg.jpeg">
 
-  <!-- GOOGLE FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/image/titania-portfolio.jpg.jpeg">
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- FONT AWESOME -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  >
-
-  <!-- CSS -->
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <!-- TYPED -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- =========================
-       NAVBAR
-  ========================= -->
-
-  <header>
-
-  <div class="navbar">
-
-    <div class="logo">
-      <div class="logo-dot"></div>
-      <h2>Titania Kaylife Putri</h2>
-    </div>
-
-    <!-- HAMBURGER -->
-    <button id="menu-toggle">
-      ☰
-    </button>
-
-    <!-- MENU -->
-    <nav id="nav-menu">
-
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-
-    </nav>
-
+  <!-- Ambient Background Lighting -->
+  <div class="ambient-lights">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+    <div class="ambient-grid"></div>
   </div>
 
-</header>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
 
-  <!-- =========================
-       HERO
-  ========================= -->
+  <!-- ========================================================================
+       HEADER & NAVIGATION
+       ======================================================================== -->
+  <header id="siteHeader">
+    <div class="container">
+      <div class="navbar-wrapper">
 
-  <!-- HERO -->
-<section class="hero hidden" id="home">
+        <!-- Brand Logo -->
+        <a href="#home" class="logo" aria-label="Titania Kaylife Home">
+          <div class="logo-symbol">T</div>
+          <span class="logo-text">Titania <span>Kaylife</span></span>
+        </a>
 
-  <!-- BLUR -->
-  <div class="hero-blur hero-blur-1"></div>
-  <div class="hero-blur hero-blur-2"></div>
+        <!-- Desktop Navigation -->
+        <nav class="nav-menu" id="desktopNav">
+          <a href="#home" class="nav-link active" data-i18n="nav_home">Home</a>
+          <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+          <a href="#education" class="nav-link" data-i18n="nav_education">Education</a>
+          <a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a>
+          <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
+          <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
+          <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+        </nav>
 
-  <!-- LEFT -->
-  <div class="hero-left">
+        <!-- Navbar Action Controls -->
+        <div class="nav-actions">
+          <!-- Language Switcher -->
+          <button id="langToggleBtn" class="lang-btn" aria-label="Switch Language"
+            title="Ganti Bahasa / Switch Language">
+            <i class="fa-solid fa-globe"></i>
+            <span id="currentLangText">EN</span>
+          </button>
 
-    <div class="hero-badge">
-      <span></span>
-      Available for Collaboration, and Internship Opportunities.
-    </div>
+          <!-- Theme Toggle -->
+          <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Mode">
+            <i class="fa-solid fa-moon" id="themeIcon"></i>
+          </button>
 
-    <p class="hello-text">Hi, I’m</p>
+          <!-- Nav CTA (Desktop) -->
+          <a href="#contact" class="nav-cta" data-i18n="nav_cta">
+            <span>Let's Talk</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
 
-    <h1 class="hero-title">
-    Titania <br>
-    <span> Kaylife Putri</span>
-</h1>
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobileMenuToggle" class="mobile-toggle" aria-label="Open Navigation Menu">
+            <i class="fa-solid fa-bars" id="menuToggleIcon"></i>
+          </button>
+        </div>
 
-    <div class="typing-wrapper">
-      <span id="typing"></span>
-    </div>
-
-    <p class="hero-description">
-      Designing thoughtful digital experiences through
-  web development, frontend developer, UI/UX design, and creative innovation.
-  I’m passionate about building modern interfaces
-  that are not only visually appealing,
-  but also intuitive, functional, and impactful.
-    </p>
-
-    <!-- BUTTON -->
-    <div class="hero-buttons">
-
-      <a href="#projects" class="primary-btn">
-        View Projects
-      </a>
-
-      <a href="assets/cv/Titania-Kaylife-CV.pdf" download class="secondary-btn">
-        Download CV
-      </a>
-
-    </div>
-
-    <!-- SOCIAL -->
-    <div class="social-links">
-
-      <a href="https://www.linkedin.com/in/titaniakaylife" target="_blank">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-
-      <a href="https://github.com/Titaniakaylife24" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-
-      <a href="https://www.instagram.com/kyfeep" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-
-      <a href="https://wa.me/+6288226299648" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-
-      <a href="mailto:titaniakaylifeputri@gmail.com">
-        <i class="fas fa-envelope"></i>
-      </a>
-
-    </div>
-
-    <!-- STATS -->
-    <div class="hero-stats">
-
-      <div>
-        <h3>5+</h3>
-        <p>Projects</p>
       </div>
-
-      <div>
-        <h3>Website</h3>
-        <p>Development</p>
-      </div>
-
-      <div>
-        <h3>Frontend</h3>
-        <p>Developer</p>
-      </div>
-
-      <div>
-        <h3>UI/UX</h3>
-        <p>Designer</p>
-      </div>
-
     </div>
+  </header>
 
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-links">
+      <a href="#home" class="mobile-link active" data-i18n="nav_home">Home</a>
+      <a href="#about" class="mobile-link" data-i18n="nav_about">About</a>
+      <a href="#education" class="mobile-link" data-i18n="nav_education">Education</a>
+      <a href="#experience" class="mobile-link" data-i18n="nav_experience">Experience</a>
+      <a href="#projects" class="mobile-link" data-i18n="nav_projects">Projects</a>
+      <a href="#skills" class="mobile-link" data-i18n="nav_skills">Skills</a>
+      <a href="#contact" class="mobile-link" data-i18n="nav_contact">Contact</a>
+    </div>
+    <div class="mobile-actions-row">
+      <a href="assets/cv/Titania-Kaylife-CV.pdf" download class="btn btn-primary btn-sm" style="flex: 1;">
+        <i class="fa-solid fa-download"></i>
+        <span data-i18n="hero_btn_cv">Download CV</span>
+      </a>
+      <a href="#contact" class="btn btn-secondary btn-sm" data-i18n="nav_cta">
+        <span>Let's Talk</span>
+      </a>
+    </div>
   </div>
 
-  <!-- RIGHT -->
-  <div class="hero-right">
+  <main>
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
 
-    <div class="hero-image-wrapper floating">
+          <!-- Left Column: Typography & Bio -->
+          <div class="hero-content fade-in-up">
 
-      <div class="image-glow"></div>
+            <!-- Availability Status Badge -->
+            <div class="hero-status">
+              <span class="status-dot"></span>
+              <span data-i18n="hero_status">Available for Collaboration & Internship Opportunities</span>
+            </div>
 
-      <img
-  src="assets/image/titania-portfolio.jpg.jpeg"
-  alt="Titania Kaylife Putri"
->
+            <p class="hero-greeting" data-i18n="hero_greeting">Hello world, I'm</p>
 
-    </div>
+            <h1 class="hero-name">
+              Titania <br>
+              <span>Kaylife Putri</span>
+            </h1>
 
-  </div>
+            <!-- Animated Typing Subtitle -->
+            <div class="hero-typing-box">
+              <span class="hero-typing-prefix" data-i18n="hero_typing_prefix">Passionate</span>
+              <span id="hero-typing"></span>
+            </div>
 
-</section>
-
-
-<section class="about-section hidden" id="about">
-
-    <div class="section-header">
-        <span class="section-tag">About Me</span>
-        <h2>Designing Experiences with Logic & Creativity</h2>
-    </div>
-
-    <div class="about-container">
-
-        <!-- LEFT -->
-        <div class="about-left">
-
-            <p class="about-description">
-                I’m an Information Systems student at 
-                <span>UPN “Veteran” Jawa Timur</span> with a strong passion for 
-                web development, UI/UX design, and digital innovation.
+            <!-- Bio Description -->
+            <p class="hero-bio" data-i18n="hero_bio">
+              Designing thoughtful digital experiences through <strong>Fullstack Web Development</strong>,
+              <strong>System Architecture</strong>, and <strong>UI/UX Design</strong>. Passionate about building modern,
+              human-centered applications that are visually captivating, intuitive, and high-performing.
             </p>
 
-            <p class="about-description">
-                I enjoy transforming ideas into clean digital experiences through 
-                responsive interfaces, intuitive user flows, and modern web technologies.
-                My interests also extend to business analysis, system planning, and 
-                user-centered product development.
-            </p>
+            <!-- Hero Action Buttons -->
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span data-i18n="hero_btn_work">Explore Projects</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
 
-            <div class="about-highlight">
-                <div class="highlight-card">
-                    <h3>Web Development</h3>
-                    <p>Building responsive websites and systems using Laravel, Tailwind CSS, PHP, and MySQL.</p>
-                </div>
+              <a href="assets/cv/Titania-Kaylife-CV.pdf" download class="btn btn-secondary">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span data-i18n="hero_btn_cv">Download CV</span>
+              </a>
 
-                <div class="highlight-card">
-                    <h3>UI/UX Design</h3>
-                    <p>Wireframing, prototyping, user flow planning, and modern interface design using Figma.</p>
-                </div>
-
-                <div class="highlight-card">
-                    <h3>Business Analytics</h3>
-                    <p>Analyzing user needs, digital strategies, and system workflows for impactful solutions.</p>
-                </div>
+              <a href="#contact" class="btn btn-outline" data-i18n="hero_btn_connect">
+                Let's Connect
+              </a>
             </div>
 
-        </div>
-
-        <!-- RIGHT -->
-        <div class="about-right">
-
-            <div class="education-card">
-
-                <div class="education-item">
-                    <span class="edu-year">2024 — Present</span>
-                    <h3>Bachelor of Information Systems</h3>
-                    <p>UPN “Veteran” Jawa Timur</p>
-                    <small>Current GPA: 3.96 / 4.00</small>
-                </div>
-
-                <div class="education-divider"></div>
-
-                <div class="education-item">
-                    <span class="edu-year">2021 — 2024</span>
-                    <h3>Computer and Network Engineering</h3>
-                    <p>SMKS Ketintang Surabaya</p>
-                    <small>Science & Technology Department</small>
-                </div>
-
-            </div>
-
-            <div class="tech-stack">
-
-                <h3>Tech Stack</h3>
-
-                <div class="stack-group">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Laravel</span>
-                    <span>PHP</span>
-                    <span>JavaScript</span>
-                    <span>Tailwind CSS</span>
-                    <span>Flutter</span>
-                    <span>MySQL</span>
-                    <span>Figma</span>
-                    <span>GitHub</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="experience-section hidden" id="experience">
-
-    <div class="section-header">
-
-        <span class="section-badge">
-            Experience
-        </span>
-
-        <h2>
-            Building Experience <br>
-            Through Leadership, Technology, <br>
-            & Creative Collaboration
-        </h2>
-
-    </div>
-
-    <div class="timeline">
-
-        <!-- ITEM -->
-        <div class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-                <span class="timeline-date">
-                    Jul 2023 — Aug 2023
-                </span>
-
-                <h3>
-                    IT Support Intern
-                </h3>
-
-                <h4>
-                    Galeri IT — Surabaya
-                </h4>
-
-                <p>
-                    Assisted in hardware troubleshooting, PC/laptop assembly,
-                    diagnostics, software installation, and technical support
-                    to improve device performance and user productivity.
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- ITEM -->
-        <div class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-                <span class="timeline-date">
-                    Nov 2023 — Apr 2024
-                </span>
-
-                <h3>
-                    Web Content Staff
-                </h3>
-
-                <h4>
-                    RC Education Centre
-                </h4>
-
-                <p>
-                    Managed responsive website content, optimized interface
-                    accessibility, and improved user experience through
-                    organized digital content management.
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- ITEM -->
-        <div class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-                <span class="timeline-date">
-                    Apr 2024 — Aug 2024
-                </span>
-
-                <h3>
-                    Admin Marketing
-                </h3>
-
-                <h4>
-                    CV Santoso Jaya
-                </h4>
-
-                <p>
-                    Managed digital promotions, audience engagement,
-                    branding strategies, and social media interaction
-                    to enhance online visibility.
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- ITEM -->
-        <div class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-                <span class="timeline-date">
-                    2025 / 2026
-                </span>
-
-                
-
-                <h3>
-                    Staff of Cader Formation
-                </h3>
-
-                <h4>
-                    HIMASIFO UPNVJT
-                </h4>
-
-                <p>
-                    Contributed to student development programs,
-                    teamwork coordination, and organizational communication
-                    activities within the Information Systems Association.
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- ITEM -->
-        <div class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-                <span class="timeline-date">
-                    2025
-                </span>
-
-                <h3>
-                    Project Leader — EDISI 2025
-                </h3>
-
-                <h4>
-                    HIMASIFO UPNVJT
-                </h4>
-
-                <p>
-                    Led cross-divisional coordination, project execution,
-                    and event workflow management to ensure successful
-                    event implementation.
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- ITEM -->
-        <div class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-                <span class="timeline-date">
-                    2026
-                </span>
-
-                <h3>
-                    Head of Publication & Ticketing
-                </h3>
-
-                <h4>
-                    Army Dance Production
-                </h4>
-
-                <p>
-                    Managed event publication strategies, digital promotion,
-                    ticketing coordination, and audience engagement activities.
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- ITEM -->
-<div class="timeline-item">
-
-    <div class="timeline-dot"></div>
-
-    <div class="timeline-content">
-
-        <span class="timeline-date">
-            2026 — 2027
-        </span>
-
-        <h3>
-            Secretary of Robotics & Intelligent Systems
-        </h3>
-
-        <h4>
-            Veteran Robotics
-        </h4>
-
-        <p>
-            Managed organizational administration, meeting schedules,
-            internal communication, and supported robotics community
-            technology programs.
-        </p>
-
-    </div>
-
-</div>
-
-    </div>
-
-</section>
-
-  <!-- =========================
-       PROJECTS
-  ========================= -->
-
-  <section class="projects-section hidden" id="projects">
-
-    <div class="section-header reveal">
-
-      <p>
-        SELECTED PROJECTS
-      </p>
-
-      <h2>
-
-        Projects That Reflect
-        My Passion & Creativity
-
-      </h2>
-
-    </div>
-
-    <div class="projects-grid">
-
-      <!-- PROJECT 1 -->
-      <div class="project-card reveal">
-
-        <div class="project-image">
-
-          <img
-            src="assets/image/flomartmobile.png"
-            alt="FLOMART Mobile"
-          >
-
-        </div>
-
-        <div class="project-info">
-
-          <div class="project-top">
-
-            <h3>
-
-              FLOMART Mobile App
-
-            </h3>
-
-            <span class="project-role">
-
-              Mobile App
-
-            </span>
-
-          </div>
-
-          <p>
-
-            Mobile e-commerce application
-            developed using Flutter
-            with modern shopping experience
-            and responsive user interface.
-
-          </p>
-
-          <div class="project-tech">
-
-            <span>Flutter</span>
-            <span>Firebase</span>
-            <span>Figma</span>
-
-          </div>
-
-          <div class="project-buttons">
-
-            <button
-              class="detail-btn"
-              data-project="flomartmobile"
-            >
-
-              View Details
-
-            </button>
-
-            <a
-              href="https://github.com/Titaniakaylife24/FLOMART_mobile.git"
-              target="_blank"
-              class="github-btn"
-            >
-
-              <i class="fa-brands fa-github"></i>
-
-              GitHub
-
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- PROJECT 2 -->
-      <div class="project-card reveal">
-
-        <div class="project-image">
-
-          <img
-            src="assets/image/flomartweb.png"
-            alt="FLOMART Web"
-          >
-
-        </div>
-
-        <div class="project-info">
-
-          <div class="project-top">
-
-            <h3>
-
-              FLOMART Web App
-
-            </h3>
-
-            <span class="project-role">
-
-              Full-Stack Web
-
-            </span>
-
-          </div>
-
-          <p>
-
-            Trust-based e-commerce platform for buying and selling plants,
-    featuring detailed plant information, secure transactions,
-    and modern shopping experiences for plant enthusiasts.
-
-          </p>
-
-          <div class="project-tech">
-
-            <span>Laravel</span>
-            <span>MySQL</span>
-            <span>Tailwind CSS</span>
-
-          </div>
-
-          <div class="project-buttons">
-
-            <button
-              class="detail-btn"
-              data-project="flomartweb"
-            >
-
-              View Details
-
-            </button>
-
-            <a
-              href="https://github.com/Titaniakaylife24/FLOMART-uas.git"
-              target="_blank"
-              class="github-btn"
-            >
-
-              <i class="fa-brands fa-github"></i>
-
-              GitHub
-
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- PROJECT 3 -->
-      <div class="project-card reveal">
-
-        <div class="project-image">
-
-          <img
-            src="assets/image/jwmarriot.png"
-            alt="JW Marriott"
-          >
-
-        </div>
-
-        <div class="project-info">
-
-          <div class="project-top">
-
-            <h3>
-
-              JW Marriott System
-
-            </h3>
-
-            <span class="project-role">
-
-              Desktop App
-
-            </span>
-
-          </div>
-
-          <p>
-
-            Reservation management desktop system
-            developed using Java
-            and MySQL database integration.
-
-          </p>
-
-          <div class="project-tech">
-
-            <span>Java</span>
-            <span>MySQL</span>
-            <span>NetBeans</span>
-
-          </div>
-
-          <div class="project-buttons">
-
-            <button
-              class="detail-btn"
-              data-project="jwmarriot"
-            >
-
-              View Details
-
-            </button>
-
-            <a
-              href="https://github.com/Titaniakaylife24/JW-Marriot.git"
-              target="_blank"
-              class="github-btn"
-            >
-
-              <i class="fa-brands fa-github"></i>
-
-              GitHub
-
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- PROJECT 4 -->
-      <div class="project-card reveal">
-
-        <div class="project-image">
-
-          <img
-            src="assets/image/kok.inaja.png"
-            alt="KOK.IN AJA"
-          >
-
-        </div>
-
-        <div class="project-info">
-
-          <div class="project-top">
-
-            <h3>
-
-              KOK.IN AJA
-
-            </h3>
-
-            <span class="project-role">
-
-              UI/UX Design
-
-            </span>
-
-          </div>
-
-          <p>
-
-            Mobile interface design
-            focused on accessibility,
-            usability,
-            and modern user-centered experiences.
-
-          </p>
-
-          <div class="project-tech">
-
-            <span>Figma</span>
-            <span>Prototype</span>
-            <span>Wireframe</span>
-
-          </div>
-
-          <div class="project-buttons">
-
-            <button
-              class="detail-btn"
-              data-project="kokinaja"
-            >
-
-              View Details
-
-            </button>
-
-            <a
-              href="https://www.figma.com/design/2ygeSSZN2QS7oXkyHI7Q4z/KOK.IN-AJA?node-id=1031-5071&t=XGHMH2md9aGjb34c-1"
-              target="_blank"
-              class="prototype-btn"
-            >
-
-              <i class="fa-brands fa-figma"></i>
-
-              View Prototype
-
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="project-card floating">
-
-    <div class="project-image">
-        <img src="assets/image/takakurakit.png" alt="">
-    </div>
-
-    <div class="project-content">
-
-        <div class="project-top">
-            <h3>TakakuraKit.id</h3>
-            <span>UI/UX Design</span>
-        </div>
-
-        <p>
-                Sustainable digital platform supporting the buying and selling
-    of composting tools and materials using the Takakura method,
-    combined with eco-friendly education and modern user experiences.
-        </p>
-
-        <div class="project-tags">
-            <span>Figma</span>
-            <span>Prototype</span>
-            <span>UI Design</span>
-        </div>
-
-        <div class="project-buttons">
-
-            <button
-                class="detail-btn"
-                data-project="takakurakit">
-                View Details
-            </button>
-
-            <a
-                href="https://www.figma.com/proto/kudJYdY3MoGceI4gZfTTaO/TakakuraKit.id?page-id=0%3A1&node-id=2-2&viewport=-8543%2C-12177%2C0.51&t=eLNB44dx2LDWRn1N-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=2%3A2&show-proto-sidebar=1"
-                target="_blank"
-                class="github-btn">
-                <i class="fa-brands fa-figma"></i>
-
-                View Prototype
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-<div class="project-card floating">
-
-    <div class="project-image">
-        <img src="assets/image/shuttleclick.png" alt="">
-    </div>
-
-    <div class="project-content">
-
-        <div class="project-top">
-            <h3>ShuttleClick</h3>
-            <span>Web Platform</span>
-        </div>
-
-        <p>
-            Desktop-based badminton court rental application developed for
-    Sony Dwi Kuncoro Badminton Hall with scheduling, booking,
-    and transaction management features.
-        </p>
-
-        <div class="project-tags">
-            <span>VB .NET</span>
-            <span>MySQL</span>
-            <span>Windows Forms</span>
-        </div>
-
-        <div class="project-buttons">
-
-            <button
-                class="detail-btn"
-                data-project="shuttleclick">
-                View Details
-            </button>
-
-            <button class="coming-btn">
-                Private Project
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-
-    </div>
-
-  </section>
-
-  <!-- =========================
-       CONTACT
-  ========================= -->
-
-  <section class="contact-section hidden" id="contact">
-
-    <div class="contact-container">
-
-        <p class="contact-label">LET'S CONNECT</p>
-
-        <h2>
-            Interested in Working Together?
-        </h2>
-
-        <p class="contact-description">
-            Open for collaborations, internships, web development, UI/UX projects,
-            frontend development, and digital innovation opportunities.
-            Let’s build impactful digital experiences together.
-        </p>
-
-        <div class="contact-socials">
-
-            <a href="mailto:titaniakaylifeputri@gmail.com" class="contact-card">
-                <i class="fa-solid fa-envelope"></i>
-                <span>Email</span>
-            </a>
-
-            <a href="https://github.com/Titaniakaylife24"
-               target="_blank"
-               class="contact-card">
-                <i class="fa-brands fa-github"></i>
-                <span>GitHub</span>
-            </a>
-
-            <a href="https://www.linkedin.com/in/titaniakaylife"
-               target="_blank"
-               class="contact-card">
+            <!-- Social Links -->
+            <div class="hero-socials">
+              <a href="https://www.linkedin.com/in/titaniakaylife" target="_blank" rel="noopener noreferrer"
+                class="hero-social-link" title="LinkedIn" aria-label="LinkedIn Profile">
                 <i class="fa-brands fa-linkedin-in"></i>
-                <span>LinkedIn</span>
-            </a>
-
-            <a href="https://www.instagram.com/kyfeep"
-               target="_blank"
-               class="contact-card">
+              </a>
+              <a href="https://github.com/Titaniakaylife24" target="_blank" rel="noopener noreferrer"
+                class="hero-social-link" title="GitHub" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.instagram.com/kyfeep" target="_blank" rel="noopener noreferrer"
+                class="hero-social-link" title="Instagram" aria-label="Instagram Profile">
                 <i class="fa-brands fa-instagram"></i>
-                <span>Instagram</span>
-            </a>
-
-            <a href="https://wa.me/6288226299648"
-               target="_blank"
-               class="contact-card">
+              </a>
+              <a href="https://wa.me/6288226299648" target="_blank" rel="noopener noreferrer" class="hero-social-link"
+                title="WhatsApp" aria-label="WhatsApp Contact">
                 <i class="fa-brands fa-whatsapp"></i>
-                <span>WhatsApp</span>
-            </a>
-
-        </div>
-
-        <div class="contact-bottom">
-
-            <div class="availability">
-                <span class="dot"></span>
-                Available for new opportunities
+              </a>
+              <a href="mailto:titaniakaylifeputri@gmail.com" class="hero-social-link" title="Email"
+                aria-label="Send Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
             </div>
-            
-            <a href="assets/cv/Titania-Kaylife-CV.pdf"
-               download
-               class="contact-cv-btn">
-                Download CV
-            </a>
+
+            <!-- Metrics / Stats Strip -->
+            <div class="hero-stats-strip">
+              <div class="hero-stat-item">
+                <h3>5+</h3>
+                <p data-i18n="stat_projects">Completed Projects</p>
+              </div>
+              <div class="hero-stat-item">
+                <h3>3.95</h3>
+                <p data-i18n="stat_gpa">Current GPA / 4.00</p>
+              </div>
+              <div class="hero-stat-item">
+                <h3>4+</h3>
+                <p data-i18n="stat_roles">Leadership Roles</p>
+              </div>
+              <div class="hero-stat-item">
+                <h3>100%</h3>
+                <p data-i18n="stat_passion">Commitment & Passion</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Visual Portrait with Glow & Floating Badges -->
+          <div class="hero-visual fade-in-up">
+            <div class="hero-card-container">
+
+              <!-- Ambient Glow Behind Portrait -->
+              <div class="hero-ambient-glow"></div>
+
+              <!-- Main Portrait Card -->
+              <div class="hero-image-card">
+                <div class="hero-image-inner">
+                  <img src="assets/image/titania-portfolio.jpg.jpeg"
+                    alt="Titania Kaylife Putri — Fullstack Developer & UI/UX Designer">
+                </div>
+              </div>
+
+              <!-- Floating Tech Badges -->
+              <div class="floating-badge floating-badge-1">
+                <i class="fa-solid fa-code" style="color: #38bdf8;"></i>
+                <span>Fullstack</span>
+              </div>
+
+              <div class="floating-badge floating-badge-2">
+                <i class="fa-brands fa-laravel" style="color: #ef4444;"></i>
+                <span>Laravel</span>
+              </div>
+
+              <div class="floating-badge floating-badge-3">
+                <i class="fa-brands fa-figma" style="color: #a855f7;"></i>
+                <span>UI/UX Design</span>
+              </div>
+
+              <div class="floating-badge floating-badge-4">
+                <i class="fa-solid fa-mobile-screen-button" style="color: #06b6d4;"></i>
+                <span>Flutter</span>
+              </div>
+
+              <!-- Floating Identity Pill -->
+              <div class="hero-experience-pill">
+                <div class="hero-pill-icon">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="hero-pill-text">
+                  <strong data-i18n="hero_pill_title">Information Systems</strong>
+                  <span data-i18n="hero_pill_sub">UPN "Veteran" Jawa Timur</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         ABOUT SECTION
+         ====================================================================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+
+        <div class="section-header fade-in-up">
+          <div class="section-tag">
+            <i class="fa-regular fa-user"></i>
+            <span data-i18n="about_tag">About Me</span>
+          </div>
+          <h2 class="section-title">
+            <span data-i18n="about_title_span">Designing Experiences</span> <br>
+            <span data-i18n="about_title_rest">with Logic & Creativity</span>
+          </h2>
+          <p class="section-subtitle" data-i18n="about_subtitle">
+            Bridging technical engineering and human-centered design to craft impactful digital solutions.
+          </p>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- Left Column: Storytelling Narrative -->
+          <div class="about-story fade-in-up">
+            <h3>
+              <span data-i18n="about_heading_hi">Information Systems Student</span> &
+              <span data-i18n="about_heading_sub">Creative Developer</span>
+            </h3>
+
+            <p class="about-lead" data-i18n="about_p1">
+              I am an undergraduate Information Systems student at <strong>UPN “Veteran” Jawa Timur</strong> with an
+              unwavering passion for fullstack web development, modern system architectures, and UI/UX product design.
+            </p>
+
+            <p class="about-paragraph" data-i18n="about_p2">
+              My journey combines analytical rigor with aesthetic empathy. I love turning complex business workflows
+              into seamless, responsive, and visually delightful web applications. From architectural database design to
+              micro-interactions in Figma, I thrive at the intersection where code meets human emotion.
+            </p>
+
+            <p class="about-paragraph" data-i18n="about_p3">
+              Beyond engineering, I actively participate in leadership and technological organizations, sharpening my
+              abilities in cross-functional collaboration, project management, and strategic problem-solving.
+            </p>
+
+            <div class="about-keypoints">
+              <div class="about-point">
+                <i class="fa-solid fa-circle-check"></i>
+                <span data-i18n="about_point_1">Fast Learner & Adaptive</span>
+              </div>
+              <div class="about-point">
+                <i class="fa-solid fa-circle-check"></i>
+                <span data-i18n="about_point_2">Detail-Oriented Design</span>
+              </div>
+              <div class="about-point">
+                <i class="fa-solid fa-circle-check"></i>
+                <span data-i18n="about_point_3">Strong Team Collaboration</span>
+              </div>
+              <div class="about-point">
+                <i class="fa-solid fa-circle-check"></i>
+                <span data-i18n="about_point_4">Modern Tech Enthusiast</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: 3 Core Pillars -->
+          <div class="about-pillars fade-in-up">
+
+            <!-- Pillar 1 -->
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="pillar-info">
+                <h4 data-i18n="pillar_1_title">Fullstack Web Development</h4>
+                <p data-i18n="pillar_1_desc">Building accessible, responsive end-to-end web applications combining
+                  dynamic frontends with robust backends using Laravel, Tailwind CSS, PHP, JavaScript, and MySQL with
+                  clean code standards.</p>
+              </div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa-solid fa-pen-ruler"></i>
+              </div>
+              <div class="pillar-info">
+                <h4 data-i18n="pillar_2_title">UI/UX & Interactive Design</h4>
+                <p data-i18n="pillar_2_desc">Crafting user journeys, wireframes, high-fidelity prototypes, and design
+                  systems in Figma that prioritize accessibility, aesthetic clarity, and intuitive interaction.</p>
+              </div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <div class="pillar-info">
+                <h4 data-i18n="pillar_3_title">Business & Systems Analysis</h4>
+                <p data-i18n="pillar_3_desc">Analyzing business requirements, mapping user workflows, and structuring
+                  system architectures that directly solve real-world user and business pain points.</p>
+              </div>
+            </div>
+
+          </div>
 
         </div>
 
-    </div>
+      </div>
+    </section>
 
-</section>
+    <!-- ======================================================================
+         EDUCATION SECTION
+         ====================================================================== -->
+    <section class="education-section" id="education">
+      <div class="container">
 
-  <!-- =========================
+        <div class="section-header fade-in-up">
+          <div class="section-tag">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span data-i18n="edu_tag">Academic Background</span>
+          </div>
+          <h2 class="section-title">
+            <span data-i18n="edu_title_span">Education &</span> <span data-i18n="edu_title_rest">Milestones</span>
+          </h2>
+          <p class="section-subtitle" data-i18n="edu_subtitle">
+            Strong foundation in information systems, computer networking, and software engineering principles.
+          </p>
+        </div>
+
+        <div class="education-grid">
+
+          <!-- Education Card 1: University -->
+          <div class="education-card fade-in-up">
+            <div class="education-header">
+              <span class="education-year">2024 — Present</span>
+              <span class="education-badge-status" data-i18n="edu_status_active">Current Degree</span>
+            </div>
+            <h3 data-i18n="edu_univ_degree">Bachelor of Information Systems</h3>
+            <div class="education-institution">UPN “Veteran” Jawa Timur — Surabaya</div>
+            <p class="education-desc" data-i18n="edu_univ_desc">
+              Focusing on software development, database architecture, user-centered interface design, business
+              intelligence, and enterprise system analysis.
+            </p>
+            <div class="education-metrics">
+              <i class="fa-solid fa-star" style="color: #eab308;"></i>
+              <span><span data-i18n="edu_gpa_label">Current Academic GPA:</span> <strong>3.95 / 4.00</strong></span>
+            </div>
+          </div>
+
+          <!-- Education Card 2: High School -->
+          <div class="education-card fade-in-up">
+            <div class="education-header">
+              <span class="education-year">2021 — 2024</span>
+              <span class="education-badge-status" data-i18n="edu_status_grad">Graduated</span>
+            </div>
+            <h3 data-i18n="edu_voc_degree">Computer & Network Engineering</h3>
+            <div class="education-institution">SMKS Ketintang Surabaya</div>
+            <p class="education-desc" data-i18n="edu_voc_desc">
+              Specialized in network infrastructure, computer hardware diagnostics, operating systems installation, and
+              foundational software logic.
+            </p>
+            <div class="education-metrics">
+              <i class="fa-solid fa-certificate" style="color: var(--accent-primary);"></i>
+              <span data-i18n="edu_voc_dept">Department of Science & Information Technology</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         EXPERIENCE & LEADERSHIP TIMELINE
+         ====================================================================== -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+
+        <div class="section-header fade-in-up">
+          <div class="section-tag">
+            <i class="fa-solid fa-briefcase"></i>
+            <span data-i18n="exp_tag">Track Record</span>
+          </div>
+          <h2 class="section-title">
+            <span data-i18n="exp_title_span">Experience &</span> <span data-i18n="exp_title_rest">Organizational
+              Leadership</span>
+          </h2>
+          <p class="section-subtitle" data-i18n="exp_subtitle">
+            Growing through technical responsibilities, creative marketing, and campus student leadership.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-controls fade-in-up">
+          <button class="filter-btn active" data-exp-filter="all" data-i18n="filter_all">All Experience</button>
+          <button class="filter-btn" data-exp-filter="work" data-i18n="filter_work">Professional & Internships</button>
+          <button class="filter-btn" data-exp-filter="org" data-i18n="filter_org">Leadership & Organizations</button>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Item 1: Fullstack Web Developer Internship -->
+          <div class="timeline-item fade-in-up" data-exp-type="work">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h3 class="timeline-role" data-i18n="exp_fullstack_role">Fullstack Web Developer Internship</h3>
+                <span class="timeline-date">Aug – Nov 2026</span>
+              </div>
+              <div class="timeline-org">
+                <i class="fa-solid fa-building"></i>
+                <span>Dinas Komunikasi dan Informatika Provinsi Jawa Timur</span>
+              </div>
+              <div class="timeline-desc" data-i18n="exp_fullstack_desc">
+                <ul class="timeline-responsibilities">
+                  <li><i class="fa-solid fa-angle-right"></i><span>Developed Majadigi Checker, a web-based system for
+                      checking and monitoring Majadigi services using Laravel, Vue.js, and PostgreSQL.</span></li>
+                  <li><i class="fa-solid fa-angle-right"></i><span>Implemented service checking, monitoring, and status
+                      management features to support structured service management.</span></li>
+                  <li><i class="fa-solid fa-angle-right"></i><span>Developed role-based access control and user
+                      management features based on different system roles.</span></li>
+                  <li><i class="fa-solid fa-angle-right"></i><span>Designed responsive user interfaces using Vue.js and
+                      integrated the frontend with Laravel and PostgreSQL for data management.</span></li>
+                  <li><i class="fa-solid fa-angle-right"></i><span>Applied the Scrum methodology throughout the
+                      analysis, design, development, and testing phases.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Web Content Staff -->
+          <div class="timeline-item fade-in-up" data-exp-type="work">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h3 class="timeline-role" data-i18n="exp_webcontent_role">Web Content Staff</h3>
+                <span class="timeline-date">Nov 2023 – Apr 2024</span>
+              </div>
+              <div class="timeline-org">
+                <i class="fa-solid fa-building"></i>
+                <span>RC Education Centre — Surabaya</span>
+              </div>
+              <div class="timeline-desc" data-i18n="exp_webcontent_desc">
+                <ul class="timeline-responsibilities">
+                  <li><i class="fa-solid fa-angle-right"></i><span>Maintained website content and improved user
+                      interface accessibility through responsive content management.</span></li>
+                  <li><i class="fa-solid fa-angle-right"></i><span>Optimized website layout and user interface to
+                      improve accessibility and user experience.</span></li>
+                  <li><i class="fa-solid fa-angle-right"></i><span>Handled online registration system management through
+                      website platforms.</span></li>
+                  <li><i class="fa-solid fa-angle-right"></i><span>Collaborated in maintaining informative and
+                      responsive web content.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Admin Marketing -->
+          <div class="timeline-item fade-in-up" data-exp-type="work">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-bullhorn"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h3 class="timeline-role" data-i18n="exp_adminmarketing_role">Admin Marketing</h3>
+                <span class="timeline-date">Apr – Aug 2024</span>
+              </div>
+              <div class="timeline-org">
+                <i class="fa-solid fa-building"></i>
+                <span>CV Santoso Jaya — Surabaya</span>
+              </div>
+              <div class="timeline-desc" data-i18n="exp_adminmarketing_desc">
+                <ul class="timeline-responsibilities">
+                  <li><i class="fa-solid fa-angle-right"></i><span>Managed digital marketing activities through social
+                      media platforms.</span></li>
+                  <li><i class="fa-solid fa-angle-right"></i><span>Analyzed audience engagement and social media
+                      performance insights.</span></li>
+                  <li><i class="fa-solid fa-angle-right"></i><span>Assisted in online branding and digital campaign
+                      optimization.</span></li>
+                  <li><i class="fa-solid fa-angle-right"></i><span>Supported content planning and online customer
+                      interaction strategies.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: IT Support Intern -->
+          <div class="timeline-item fade-in-up" data-exp-type="work">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-wrench"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h3 class="timeline-role" data-i18n="exp_itsupport_role">IT Support Intern</h3>
+                <span class="timeline-date">Jul – Aug 2023</span>
+              </div>
+              <div class="timeline-org">
+                <i class="fa-solid fa-building"></i>
+                <span>Galeri IT — Surabaya</span>
+              </div>
+              <div class="timeline-desc" data-i18n="exp_itsupport_desc">
+                <ul class="timeline-responsibilities">
+                  <li><i class="fa-solid fa-angle-right"></i><span>Assembled and configured PC and laptop hardware based
+                      on user requirements.</span></li>
+                  <li><i class="fa-solid fa-angle-right"></i><span>Performed hardware maintenance, troubleshooting, and
+                      system diagnostics.</span></li>
+                  <li><i class="fa-solid fa-angle-right"></i><span>Assisted in identifying technical issues and
+                      improving device performance.</span></li>
+                  <li><i class="fa-solid fa-angle-right"></i><span>Conducted software installation and basic network
+                      configuration support.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Secretary of Robotics & Intelligent Systems -->
+          <div class="timeline-item fade-in-up" data-exp-type="org">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h3 class="timeline-role" data-i18n="exp_robotics_role">Secretary of Robotics & Intelligent Systems</h3>
+                <span class="timeline-date">2026 — 2027</span>
+              </div>
+              <div class="timeline-org">
+                <i class="fa-solid fa-microchip"></i>
+                <span>Veteran Robotics</span>
+              </div>
+              <p class="timeline-desc" data-i18n="exp_robotics_desc">
+                Managing organizational documentation, executive meeting logistics, internal communications, and
+                supporting robotics community technology workshops and competitions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 6: Head of Publication & Ticketing -->
+          <div class="timeline-item fade-in-up" data-exp-type="org">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-ticket"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h3 class="timeline-role" data-i18n="exp_army_role">Head of Publication & Ticketing</h3>
+                <span class="timeline-date">2026</span>
+              </div>
+              <div class="timeline-org">
+                <i class="fa-solid fa-masks-theater"></i>
+                <span>Army Dance Production</span>
+              </div>
+              <p class="timeline-desc" data-i18n="exp_army_desc">
+                Oversaw multi-channel event publicity strategies, digital marketing collateral, online ticketing
+                workflows, and customer service for hundreds of audience members.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 7: Project Leader EDISI -->
+          <div class="timeline-item fade-in-up" data-exp-type="org">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-flag"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h3 class="timeline-role" data-i18n="exp_edisi_role">Project Leader — EDISI 2025</h3>
+                <span class="timeline-date">2025</span>
+              </div>
+              <div class="timeline-org">
+                <i class="fa-solid fa-sitemap"></i>
+                <span>HIMASIFO UPNVJT</span>
+              </div>
+              <p class="timeline-desc" data-i18n="exp_edisi_desc">
+                Directed cross-divisional committee workflows, budget scheduling, and end-to-end event execution to
+                achieve seamless implementation and high participant engagement.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 8: Staff of Cader Formation -->
+          <div class="timeline-item fade-in-up" data-exp-type="org">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h3 class="timeline-role" data-i18n="exp_cader_role">Staff of Cader Formation</h3>
+                <span class="timeline-date">2025 / 2026</span>
+              </div>
+              <div class="timeline-org">
+                <i class="fa-solid fa-sitemap"></i>
+                <span>HIMASIFO UPNVJT</span>
+              </div>
+              <p class="timeline-desc" data-i18n="exp_cader_desc">
+                Drove new student regeneration programs, organized team-building workshops, and facilitated
+                organizational communication within the Information Systems Student Association.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SELECTED PROJECTS SHOWCASE
+         ====================================================================== -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+
+        <div class="section-header fade-in-up">
+          <div class="section-tag">
+            <i class="fa-solid fa-laptop-code"></i>
+            <span data-i18n="proj_tag">Portfolio Showcase</span>
+          </div>
+          <h2 class="section-title">
+            <span data-i18n="proj_title_span">Selected Projects &</span> <br>
+            <span data-i18n="proj_title_rest">Digital Innovations</span>
+          </h2>
+          <p class="section-subtitle" data-i18n="proj_subtitle">
+            A curated collection of web apps, mobile solutions, and UI/UX prototypes crafted with modern technologies.
+          </p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="filter-controls fade-in-up">
+          <button class="filter-btn active" data-proj-filter="all" data-i18n="filter_proj_all">All Projects</button>
+          <button class="filter-btn" data-proj-filter="web" data-i18n="filter_proj_web">Web Development</button>
+          <button class="filter-btn" data-proj-filter="mobile" data-i18n="filter_proj_mobile">Mobile Apps</button>
+          <button class="filter-btn" data-proj-filter="design" data-i18n="filter_proj_design">UI/UX Design</button>
+          <button class="filter-btn" data-proj-filter="desktop" data-i18n="filter_proj_desktop">Desktop Systems</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: FLOMART Mobile App -->
+          <div class="project-card fade-in-up" data-proj-category="mobile">
+            <div class="project-image-box">
+              <img src="assets/image/flomartmobile.png" alt="FLOMART Mobile App Screenshot" loading="lazy">
+              <span class="project-category-badge">Mobile App</span>
+            </div>
+            <div class="project-body">
+              <h3>FLOMART Mobile App</h3>
+              <p data-i18n="proj_flomartmobile_desc">Mobile plant marketplace developed using Flutter featuring smooth
+                catalog exploration, cart management, and modern responsive user interface.</p>
+              <div class="project-tech-pills">
+                <span class="project-tech-pill">Flutter</span>
+                <span class="project-tech-pill">Firebase</span>
+                <span class="project-tech-pill">Figma</span>
+              </div>
+              <div class="project-actions">
+                <button class="project-btn-detail" data-project="flomartmobile">
+                  <i class="fa-solid fa-eye"></i>
+                  <span data-i18n="btn_view_details">View Details</span>
+                </button>
+                <a href="https://github.com/Titaniakaylife24/FLOMART_mobile.git" target="_blank"
+                  rel="noopener noreferrer" class="project-btn-icon" title="GitHub Repository"
+                  aria-label="GitHub Repository">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: FLOMART Web App -->
+          <div class="project-card fade-in-up" data-proj-category="web">
+            <div class="project-image-box">
+              <img src="assets/image/flomartweb.png" alt="FLOMART Web App Screenshot" loading="lazy">
+              <span class="project-category-badge">Full-Stack Web</span>
+            </div>
+            <div class="project-body">
+              <h3>FLOMART Web App</h3>
+              <p data-i18n="proj_flomartweb_desc">Trust-based plant e-commerce web platform featuring comprehensive
+                botanical data, secure user transactions, and modern responsive design built with Laravel.</p>
+              <div class="project-tech-pills">
+                <span class="project-tech-pill">Laravel</span>
+                <span class="project-tech-pill">MySQL</span>
+                <span class="project-tech-pill">Tailwind CSS</span>
+                <span class="project-tech-pill">PHP</span>
+              </div>
+              <div class="project-actions">
+                <button class="project-btn-detail" data-project="flomartweb">
+                  <i class="fa-solid fa-eye"></i>
+                  <span data-i18n="btn_view_details">View Details</span>
+                </button>
+                <a href="https://github.com/Titaniakaylife24/FLOMART-uas.git" target="_blank" rel="noopener noreferrer"
+                  class="project-btn-icon" title="GitHub Repository" aria-label="GitHub Repository">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: KOK.IN AJA -->
+          <div class="project-card fade-in-up" data-proj-category="design">
+            <div class="project-image-box">
+              <img src="assets/image/kok.inaja.png" alt="KOK.IN AJA UI/UX Prototype Screenshot" loading="lazy">
+              <span class="project-category-badge">UI/UX Design</span>
+            </div>
+            <div class="project-body">
+              <h3>KOK.IN AJA</h3>
+              <p data-i18n="proj_kokinaja_desc">Mobile interface design & high-fidelity prototype focused on
+                accessibility, intuitive ordering user flows, and aesthetic visual hierarchy.</p>
+              <div class="project-tech-pills">
+                <span class="project-tech-pill">Figma</span>
+                <span class="project-tech-pill">Wireframing</span>
+                <span class="project-tech-pill">Interactive Prototype</span>
+              </div>
+              <div class="project-actions">
+                <button class="project-btn-detail" data-project="kokinaja">
+                  <i class="fa-solid fa-eye"></i>
+                  <span data-i18n="btn_view_details">View Details</span>
+                </button>
+                <a href="https://www.figma.com/design/2ygeSSZN2QS7oXkyHI7Q4z/KOK.IN-AJA?node-id=1031-5071&t=XGHMH2md9aGjb34c-1"
+                  target="_blank" rel="noopener noreferrer" class="project-btn-icon" title="Figma Prototype"
+                  aria-label="Figma Prototype">
+                  <i class="fa-brands fa-figma"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: TakakuraKit.id -->
+          <div class="project-card fade-in-up" data-proj-category="design">
+            <div class="project-image-box">
+              <img src="assets/image/takakurakit.png" alt="TakakuraKit.id Prototype Screenshot" loading="lazy">
+              <span class="project-category-badge">UI/UX Design</span>
+            </div>
+            <div class="project-body">
+              <h3>TakakuraKit.id</h3>
+              <p data-i18n="proj_takakurakit_desc">Sustainable digital platform prototype supporting the commerce of
+                Takakura composting tools with eco-friendly educational content and engaging UX.</p>
+              <div class="project-tech-pills">
+                <span class="project-tech-pill">Figma</span>
+                <span class="project-tech-pill">UX Research</span>
+                <span class="project-tech-pill">Design System</span>
+              </div>
+              <div class="project-actions">
+                <button class="project-btn-detail" data-project="takakurakit">
+                  <i class="fa-solid fa-eye"></i>
+                  <span data-i18n="btn_view_details">View Details</span>
+                </button>
+                <a href="https://www.figma.com/proto/kudJYdY3MoGceI4gZfTTaO/TakakuraKit.id?page-id=0%3A1&node-id=2-2&viewport=-8543%2C-12177%2C0.51&t=eLNB44dx2LDWRn1N-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=2%3A2&show-proto-sidebar=1"
+                  target="_blank" rel="noopener noreferrer" class="project-btn-icon" title="Figma Prototype"
+                  aria-label="Figma Prototype">
+                  <i class="fa-brands fa-figma"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 5: JW Marriott System -->
+          <div class="project-card fade-in-up" data-proj-category="desktop">
+            <div class="project-image-box">
+              <img src="assets/image/jwmarriot.png" alt="JW Marriott System Screenshot" loading="lazy">
+              <span class="project-category-badge">Desktop App</span>
+            </div>
+            <div class="project-body">
+              <h3>JW Marriott Reservation</h3>
+              <p data-i18n="proj_jwmarriot_desc">Desktop reservation and room allocation management software developed
+                in Java GUI with robust MySQL transactional database handling.</p>
+              <div class="project-tech-pills">
+                <span class="project-tech-pill">Java</span>
+                <span class="project-tech-pill">MySQL</span>
+                <span class="project-tech-pill">NetBeans</span>
+              </div>
+              <div class="project-actions">
+                <button class="project-btn-detail" data-project="jwmarriot">
+                  <i class="fa-solid fa-eye"></i>
+                  <span data-i18n="btn_view_details">View Details</span>
+                </button>
+                <a href="https://github.com/Titaniakaylife24/JW-Marriot.git" target="_blank" rel="noopener noreferrer"
+                  class="project-btn-icon" title="GitHub Repository" aria-label="GitHub Repository">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 6: ShuttleClick -->
+          <div class="project-card fade-in-up" data-proj-category="desktop">
+            <div class="project-image-box">
+              <img src="assets/image/shuttleclick.png" alt="ShuttleClick System Screenshot" loading="lazy">
+              <span class="project-category-badge">Desktop System</span>
+            </div>
+            <div class="project-body">
+              <h3>ShuttleClick</h3>
+              <p data-i18n="proj_shuttleclick_desc">Desktop-based badminton court rental application developed for Sony
+                Dwi Kuncoro Hall featuring court scheduling, booking, and transaction billing.</p>
+              <div class="project-tech-pills">
+                <span class="project-tech-pill">VB .NET</span>
+                <span class="project-tech-pill">MySQL</span>
+                <span class="project-tech-pill">Windows Forms</span>
+              </div>
+              <div class="project-actions">
+                <button class="project-btn-detail" data-project="shuttleclick">
+                  <i class="fa-solid fa-eye"></i>
+                  <span data-i18n="btn_view_details">View Details</span>
+                </button>
+                <span class="project-btn-icon" title="Private Client Project" aria-label="Private Project">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SKILLS & TECH STACK SECTION
+         ====================================================================== -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+
+        <div class="section-header fade-in-up">
+          <div class="section-tag">
+            <i class="fa-solid fa-layer-group"></i>
+            <span data-i18n="skills_tag">Technical Arsenal</span>
+          </div>
+          <h2 class="section-title">
+            <span data-i18n="skills_title_span">Skills &</span> <span data-i18n="skills_title_rest">Tech Stack</span>
+          </h2>
+          <p class="section-subtitle" data-i18n="skills_subtitle">
+            Technologies, frameworks, and design tooling I leverage to build scalable, beautiful digital products.
+          </p>
+        </div>
+
+        <div class="skills-marquee-container">
+
+          <!-- Category 1: Frontend (Moves Left) -->
+          <div class="skill-marquee-row fade-in-up">
+            <div class="skill-row-label">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h4 data-i18n="skill_cat_frontend">Frontend Engineering</h4>
+            </div>
+            <div class="skill-marquee-viewport">
+              <div class="skill-marquee-track track-left">
+                <!-- Group 1 -->
+                <div class="skill-badge"><i class="fa-brands fa-vuejs" style="color: #42b883;"></i><span>Vue.js</span>
+                </div>
+                <div class="skill-badge"><i class="fa-brands fa-html5" style="color: #e34f26;"></i><span>HTML5</span>
+                </div>
+                <div class="skill-badge"><i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i><span>CSS3</span>
+                </div>
+                <div class="skill-badge"><i class="fa-brands fa-js" style="color: #f7df1e;"></i><span>JavaScript
+                    (ES6+)</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-wind" style="color: #06b6d4;"></i><span>Tailwind
+                    CSS</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-mobile" style="color: #10b981;"></i><span>Responsive
+                    UI</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-network-wired" style="color: #38bdf8;"></i><span>Web
+                    APIs</span></div>
+                <!-- Group 2 (Duplicate for Seamless Infinite Loop) -->
+                <div class="skill-badge"><i class="fa-brands fa-vuejs" style="color: #42b883;"></i><span>Vue.js</span>
+                </div>
+                <div class="skill-badge"><i class="fa-brands fa-html5" style="color: #e34f26;"></i><span>HTML5</span>
+                </div>
+                <div class="skill-badge"><i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i><span>CSS3</span>
+                </div>
+                <div class="skill-badge"><i class="fa-brands fa-js" style="color: #f7df1e;"></i><span>JavaScript
+                    (ES6+)</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-wind" style="color: #06b6d4;"></i><span>Tailwind
+                    CSS</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-mobile" style="color: #10b981;"></i><span>Responsive
+                    UI</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-network-wired" style="color: #38bdf8;"></i><span>Web
+                    APIs</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend & Database (Moves Right) -->
+          <div class="skill-marquee-row fade-in-up">
+            <div class="skill-row-label">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h4 data-i18n="skill_cat_backend">Backend & Databases</h4>
+            </div>
+            <div class="skill-marquee-viewport">
+              <div class="skill-marquee-track track-right">
+                <!-- Group 1 -->
+                <div class="skill-badge"><i class="fa-brands fa-laravel"
+                    style="color: #ff2d20;"></i><span>Laravel</span></div>
+                <div class="skill-badge"><i class="fa-brands fa-php" style="color: #777bb4;"></i><span>PHP</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-database"
+                    style="color: #336791;"></i><span>PostgreSQL</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-database" style="color: #00758f;"></i><span>MySQL</span>
+                </div>
+                <div class="skill-badge"><i class="fa-solid fa-fire" style="color: #f5820d;"></i><span>Firebase</span>
+                </div>
+                <div class="skill-badge"><i class="fa-solid fa-server" style="color: #10b981;"></i><span>RESTful
+                    APIs</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-cubes-stacked" style="color: #8b5cf6;"></i><span>CRUD
+                    Architecture</span></div>
+                <!-- Group 2 (Duplicate) -->
+                <div class="skill-badge"><i class="fa-brands fa-laravel"
+                    style="color: #ff2d20;"></i><span>Laravel</span></div>
+                <div class="skill-badge"><i class="fa-brands fa-php" style="color: #777bb4;"></i><span>PHP</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-database"
+                    style="color: #336791;"></i><span>PostgreSQL</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-database" style="color: #00758f;"></i><span>MySQL</span>
+                </div>
+                <div class="skill-badge"><i class="fa-solid fa-fire" style="color: #f5820d;"></i><span>Firebase</span>
+                </div>
+                <div class="skill-badge"><i class="fa-solid fa-server" style="color: #10b981;"></i><span>RESTful
+                    APIs</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-cubes-stacked" style="color: #8b5cf6;"></i><span>CRUD
+                    Architecture</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Mobile & Desktop (Moves Left) -->
+          <div class="skill-marquee-row fade-in-up">
+            <div class="skill-row-label">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <h4 data-i18n="skill_cat_mobile">Mobile & Desktop</h4>
+            </div>
+            <div class="skill-marquee-viewport">
+              <div class="skill-marquee-track track-left">
+                <!-- Group 1 -->
+                <div class="skill-badge"><i class="fa-solid fa-mobile-screen-button"
+                    style="color: #02569b;"></i><span>Flutter</span></div>
+                <div class="skill-badge"><i class="fa-brands fa-google" style="color: #0175c2;"></i><span>Dart</span>
+                </div>
+                <div class="skill-badge"><i class="fa-brands fa-java" style="color: #ea2d2e;"></i><span>Java GUI</span>
+                </div>
+                <div class="skill-badge"><i class="fa-solid fa-window-maximize" style="color: #512bd4;"></i><span>VB
+                    .NET</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-table-columns" style="color: #06b6d4;"></i><span>Windows
+                    Forms</span></div>
+                <!-- Group 2 (Duplicate) -->
+                <div class="skill-badge"><i class="fa-solid fa-mobile-screen-button"
+                    style="color: #02569b;"></i><span>Flutter</span></div>
+                <div class="skill-badge"><i class="fa-brands fa-google" style="color: #0175c2;"></i><span>Dart</span>
+                </div>
+                <div class="skill-badge"><i class="fa-brands fa-java" style="color: #ea2d2e;"></i><span>Java GUI</span>
+                </div>
+                <div class="skill-badge"><i class="fa-solid fa-window-maximize" style="color: #512bd4;"></i><span>VB
+                    .NET</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-table-columns" style="color: #06b6d4;"></i><span>Windows
+                    Forms</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: UI/UX & Design (Moves Right) -->
+          <div class="skill-marquee-row fade-in-up">
+            <div class="skill-row-label">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-bezier-curve"></i>
+              </div>
+              <h4 data-i18n="skill_cat_design">UI/UX & Product Design</h4>
+            </div>
+            <div class="skill-marquee-viewport">
+              <div class="skill-marquee-track track-right">
+                <!-- Group 1 -->
+                <div class="skill-badge"><i class="fa-brands fa-figma" style="color: #f24e1e;"></i><span>Figma</span>
+                </div>
+                <div class="skill-badge"><i class="fa-solid fa-sitemap"
+                    style="color: #a855f7;"></i><span>Wireframing</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-route" style="color: #ec4899;"></i><span>User Journey
+                    Flows</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-cubes" style="color: #10b981;"></i><span>Interactive
+                    Prototype</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-eye" style="color: #3b82f6;"></i><span>Visual
+                    Hierarchy</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-palette" style="color: #06b6d4;"></i><span>Design
+                    Systems</span></div>
+                <!-- Group 2 (Duplicate) -->
+                <div class="skill-badge"><i class="fa-brands fa-figma" style="color: #f24e1e;"></i><span>Figma</span>
+                </div>
+                <div class="skill-badge"><i class="fa-solid fa-sitemap"
+                    style="color: #a855f7;"></i><span>Wireframing</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-route" style="color: #ec4899;"></i><span>User Journey
+                    Flows</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-cubes" style="color: #10b981;"></i><span>Interactive
+                    Prototype</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-eye" style="color: #3b82f6;"></i><span>Visual
+                    Hierarchy</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-palette" style="color: #06b6d4;"></i><span>Design
+                    Systems</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5: Tools & Workflow (Moves Left) -->
+          <div class="skill-marquee-row fade-in-up">
+            <div class="skill-row-label">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <h4 data-i18n="skill_cat_tools">Workflow & Developer Tools</h4>
+            </div>
+            <div class="skill-marquee-viewport">
+              <div class="skill-marquee-track track-left">
+                <!-- Group 1 -->
+                <div class="skill-badge"><i class="fa-brands fa-git-alt" style="color: #f05032;"></i><span>Git</span>
+                </div>
+                <div class="skill-badge"><i class="fa-brands fa-github" style="color: #94a3b8;"></i><span>GitHub</span>
+                </div>
+                <div class="skill-badge"><i class="fa-solid fa-code" style="color: #007acc;"></i><span>Visual
+                    Studio</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-cube" style="color: #1b6ac6;"></i><span>NetBeans
+                    IDE</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-terminal" style="color: #10b981;"></i><span>Command
+                    Line</span></div>
+                <!-- Group 2 (Duplicate) -->
+                <div class="skill-badge"><i class="fa-brands fa-git-alt" style="color: #f05032;"></i><span>Git</span>
+                </div>
+                <div class="skill-badge"><i class="fa-brands fa-github" style="color: #94a3b8;"></i><span>GitHub</span>
+                </div>
+                <div class="skill-badge"><i class="fa-solid fa-code" style="color: #007acc;"></i><span>Visual
+                    Studio</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-cube" style="color: #1b6ac6;"></i><span>NetBeans
+                    IDE</span></div>
+                <div class="skill-badge"><i class="fa-solid fa-terminal" style="color: #10b981;"></i><span>Command
+                    Line</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CONTACT SECTION & FINAL CTA
+         ====================================================================== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+
+        <div class="contact-box fade-in-up">
+          <div class="contact-ambient"></div>
+
+          <div class="contact-content">
+            <span class="contact-label" data-i18n="contact_label">Let's Connect</span>
+            <h2 class="contact-title">
+              <span data-i18n="contact_title_span">Ready to Collaborate on</span> <br>
+              <span data-i18n="contact_title_rest">Impactful Digital Ideas?</span>
+            </h2>
+            <p class="contact-desc" data-i18n="contact_desc">
+              Whether you have an internship opportunity, a freelance web or UI/UX project, or simply want to chat about
+              technology — my inbox and channels are always open!
+            </p>
+
+            <!-- Direct Contact Cards Grid -->
+            <div class="contact-methods-grid">
+
+              <!-- Email with Click-to-Copy -->
+              <button class="contact-card-btn" id="copyEmailBtn" aria-label="Copy Email Address">
+                <div class="contact-card-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-card-text">
+                  <span class="contact-card-title">Email</span>
+                  <span class="contact-card-sub" id="emailCardSub">titaniakaylifeputri@gmail.com</span>
+                </div>
+              </button>
+
+              <!-- WhatsApp -->
+              <a href="https://wa.me/6288226299648" target="_blank" rel="noopener noreferrer" class="contact-card-btn">
+                <div class="contact-card-icon">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contact-card-text">
+                  <span class="contact-card-title">WhatsApp</span>
+                  <span class="contact-card-sub">+62 882-2629-9648</span>
+                </div>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/titaniakaylife" target="_blank" rel="noopener noreferrer"
+                class="contact-card-btn">
+                <div class="contact-card-icon">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="contact-card-text">
+                  <span class="contact-card-title">LinkedIn</span>
+                  <span class="contact-card-sub">in/titaniakaylife</span>
+                </div>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/Titaniakaylife24" target="_blank" rel="noopener noreferrer"
+                class="contact-card-btn">
+                <div class="contact-card-icon">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="contact-card-text">
+                  <span class="contact-card-title">GitHub</span>
+                  <span class="contact-card-sub">@Titaniakaylife24</span>
+                </div>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/kyfeep" target="_blank" rel="noopener noreferrer"
+                class="contact-card-btn">
+                <div class="contact-card-icon">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="contact-card-text">
+                  <span class="contact-card-title">Instagram</span>
+                  <span class="contact-card-sub">@kyfeep</span>
+                </div>
+              </a>
+
+            </div>
+
+            <!-- Bottom Availability & CV Download Strip -->
+            <div class="contact-bottom-strip">
+              <div class="contact-availability">
+                <span class="status-dot"></span>
+                <span data-i18n="contact_status">Available for new opportunities & collaborations</span>
+              </div>
+              <a href="assets/cv/Titania-Kaylife-CV.pdf" download class="btn btn-primary">
+                <i class="fa-solid fa-download"></i>
+                <span data-i18n="hero_btn_cv">Download Official CV</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
        FOOTER
-  ========================= -->
-
+       ======================================================================== -->
   <footer>
-
-    <p>
-
-      © 2026 Titania Kaylife Putri —
-      Designed with Creativity, Simplicity, Passion, and Love.
-
-    </p>
-
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">
+          © 2026 <strong>Titania Kaylife Putri</strong> — <span data-i18n="footer_rights">Designed with Creativity, Simplicity, Passion, and Love.</span>
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/titaniakaylife" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link" title="LinkedIn" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Titaniakaylife24" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link" title="GitHub" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/kyfeep" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link" title="Instagram" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/6288226299648" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+            title="WhatsApp" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="mailto:titaniakaylifeputri@gmail.com" class="footer-social-link" title="Email" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <!-- Back to Top Floating Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to Top" title="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
-  <!-- PROJECT MODAL -->
-
-<div class="project-modal" id="projectModal">
-
-    <div class="modal-content">
-
-        <span class="close-modal">&times;</span>
-
-        <h2 id="modalTitle"></h2>
-
-        <p id="modalDescription"></p>
-
-        <div class="modal-tech" id="modalTech"></div>
-
+  <!-- ========================================================================
+       INTERACTIVE PROJECT DETAILS MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Project Details Dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-subtitle" id="modalSubtitle"></div>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <div class="modal-desc" id="modalDescription"></div>
+      <h4 class="modal-features-title" data-i18n="modal_features_title">Key Features & Highlights:</h4>
+      <ul class="modal-features-list" id="modalFeatures"></ul>
+      <div class="modal-tech-stack" id="modalTech"></div>
+      <div class="modal-actions" id="modalActions"></div>
     </div>
+  </div>
 
-</div>
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Email copied to clipboard!</span>
+  </div>
 
-<!-- JS -->
+  <!-- Main JavaScript Logic -->
   <script src="script.js"></script>
-
-<script>
-
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
-
-if(menuToggle && navMenu){
-
-    menuToggle.addEventListener("click", () => {
-
-        navMenu.classList.toggle("active");
-
-    });
-
-} 
-
-</script>
 
 </body>
 
