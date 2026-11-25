@@ -1467,6 +1467,27 @@ header.scrolled .navbar-wrapper {
   letter-spacing: 0.04em;
 }
 
+.project-hki-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: var(--radius-full);
+  background: rgba(16, 185, 129, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+}
+
 /* Project Body Content */
 .project-body {
   padding: 24px;

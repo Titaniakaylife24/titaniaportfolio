@@ -125,9 +125,11 @@
       filter_proj_design: "UI/UX Design",
       filter_proj_desktop: "Desktop Systems",
       btn_view_details: "View Details",
+      badge_hki: "HKI Registered",
       proj_flomartmobile_desc: "Mobile plant marketplace developed using Flutter featuring smooth catalog exploration, cart management, and modern responsive user interface.",
       proj_flomartweb_desc: "Trust-based plant e-commerce web platform featuring comprehensive botanical data, secure user transactions, and modern responsive design built with Laravel.",
       proj_inlife_desc: "Web-based inventory management system built with Laravel and MySQL featuring role-based access control (Admin, Manager, Staff, Employee), stock monitoring dashboards, reporting, and Railway deployment.",
+      proj_simonter_desc: "Centralized full-stack web system for real-time monitoring, checking, and evaluation of digital services, featuring automated tester assignment, 3-level analytics, PDF/Excel reporting, and registered HKI.",
       proj_kokinaja_desc: "Mobile interface design & high-fidelity prototype focused on accessibility, intuitive ordering user flows, and aesthetic visual hierarchy.",
       proj_takakurakit_desc: "Sustainable digital platform prototype supporting the commerce of Takakura composting tools with eco-friendly educational content and engaging UX.",
       proj_jwmarriot_desc: "Desktop reservation and room allocation management software developed in Java GUI with robust MySQL transactional database handling.",
@@ -154,6 +156,7 @@
       modal_features_title: "Key Features & Highlights:",
       toast_email_copied: "Email copied to clipboard!",
       modal_btn_github: "View GitHub Repo",
+      modal_btn_live: "Visit Live App",
       modal_btn_prototype: "Launch Figma Prototype",
       modal_btn_private: "Confidential Project"
     },
@@ -271,9 +274,11 @@
       filter_proj_design: "Desain UI/UX",
       filter_proj_desktop: "Sistem Desktop",
       btn_view_details: "Lihat Detail",
+      badge_hki: "Terdaftar HKI",
       proj_flomartmobile_desc: "Aplikasi mobile marketplace tanaman berbasis Flutter dengan eksplorasi katalog produk interaktif, keranjang belanja, dan UI responsif modern.",
       proj_flomartweb_desc: "Platform web e-commerce jual beli tanaman terpercaya berbasis Laravel dengan data botani lengkap, transaksi aman, dan tampilan responsif.",
       proj_inlife_desc: "Sistem manajemen inventaris berbasis web dengan Laravel dan MySQL, dilengkapi kontrol akses multi-role (Admin, Manager, Staff, Employee), dashboard monitoring stok, pelaporan, dan deployment Railway.",
+      proj_simonter_desc: "Aplikasi web full-stack terpusat untuk monitoring, pengecekan, dan evaluasi keandalan layanan digital secara real-time, lengkap dengan pembagian tester otomatis, analitik 3 level, laporan PDF/Excel, serta terdaftar HKI.",
       proj_kokinaja_desc: "Desain antarmuka mobile & prototipe interaktif yang memprioritaskan aksesibilitas, alur pemesanan intuitif, dan hierarki visual yang bersih.",
       proj_takakurakit_desc: "Prototipe platform digital berkelanjutan untuk pembelian alat kompos metode Takakura dengan edukasi ramah lingkungan dan pengalaman UX yang memikat.",
       proj_jwmarriot_desc: "Aplikasi desktop reservasi hotel dan manajemen alokasi kamar yang dikembangkan menggunakan Java GUI dan basis data transaksional MySQL.",
@@ -300,6 +305,7 @@
       modal_features_title: "Fitur Utama & Sorotan Proyek:",
       toast_email_copied: "Email berhasil disalin ke clipboard!",
       modal_btn_github: "Buka Repositori GitHub",
+      modal_btn_live: "Buka Aplikasi Live",
       modal_btn_prototype: "Jalankan Prototipe Figma",
       modal_btn_private: "Proyek Privat"
     }
@@ -379,6 +385,32 @@
       ],
       tech: ["Laravel", "MySQL", "Tailwind CSS", "PHP", "Railway"],
       github: "https://github.com/Titaniakaylife24/inlife-inventory-management-system.git",
+      prototype: null
+    },
+
+    simonter: {
+      title: "SIMONTER (Sistem Monitoring & Checking Layanan Terpadu)",
+      category: "Full-Stack Web Application • HKI Registered",
+      category_id: "Aplikasi Web Full-Stack • Terdaftar HKI",
+      desc_en: "A centralized web application for monitoring, checking, and evaluating the reliability and availability of digital service portals in a structured, real-time, and well-documented workflow. Officially registered with Intellectual Property Rights (HKI) and deployed live on Vercel.",
+      desc_id: "Aplikasi web terpusat untuk memantau, memeriksa (checking), dan mengevaluasi keandalan serta ketersediaan berbagai aplikasi dan portal layanan digital secara terpadu, terstruktur, real-time, dan terdokumentasi. Telah terdaftar Hak Kekayaan Intelektual (HKI) dan di-deploy live di Vercel.",
+      features_en: [
+        "Tester account management and automated deadline-based service assignment across periods",
+        "Operational status recording (Normal vs Disrupted) with issue evidence upload and recheck workflow",
+        "Real-time progress monitoring with 3-level drill-down analytics and integrated notifications",
+        "Official report generation and export in PDF and Excel (.xlsx) formats",
+        "Officially registered under Intellectual Property Rights (HKI) and live-deployed on Vercel"
+      ],
+      features_id: [
+        "Manajemen akun Tester dan pembagian layanan otomatis berbasis periode serta batas waktu (deadline)",
+        "Pencatatan status operasional (Normal vs Terkendala), pengunggahan bukti kendala, dan alur tindak lanjut pengujian ulang (recheck)",
+        "Monitoring progres dengan analitik mendalam (drill-down 3 level) serta notifikasi terintegrasi",
+        "Pembuatan laporan resmi dalam format PDF dan Excel (.xlsx)",
+        "Telah memiliki Hak Kekayaan Intelektual (HKI) resmi dan di-deploy live di Vercel"
+      ],
+      tech: ["Full-Stack Web", "3-Level Analytics", "PDF & Excel (.xlsx)", "Vercel", "HKI Registered"],
+      liveUrl: "https://sistem-informasi-pengecekan-dan-monitoring-layanan-terpadu.vercel.app/",
+      github: null,
       prototype: null
     },
 
@@ -814,6 +846,15 @@
 
     // Action buttons
     let actionsHtml = '';
+    if (data.liveUrl) {
+      actionsHtml += `
+        <a href="${data.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          <span>${dict.modal_btn_live}</span>
+        </a>
+      `;
+    }
+
     if (data.github) {
       actionsHtml += `
         <a href="${data.github}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
