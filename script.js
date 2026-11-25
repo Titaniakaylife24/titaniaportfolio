@@ -127,6 +127,7 @@
       btn_view_details: "View Details",
       proj_flomartmobile_desc: "Mobile plant marketplace developed using Flutter featuring smooth catalog exploration, cart management, and modern responsive user interface.",
       proj_flomartweb_desc: "Trust-based plant e-commerce web platform featuring comprehensive botanical data, secure user transactions, and modern responsive design built with Laravel.",
+      proj_inlife_desc: "Web-based inventory management system built with Laravel and MySQL featuring role-based access control (Admin, Manager, Staff, Employee), stock monitoring dashboards, reporting, and Railway deployment.",
       proj_kokinaja_desc: "Mobile interface design & high-fidelity prototype focused on accessibility, intuitive ordering user flows, and aesthetic visual hierarchy.",
       proj_takakurakit_desc: "Sustainable digital platform prototype supporting the commerce of Takakura composting tools with eco-friendly educational content and engaging UX.",
       proj_jwmarriot_desc: "Desktop reservation and room allocation management software developed in Java GUI with robust MySQL transactional database handling.",
@@ -272,6 +273,7 @@
       btn_view_details: "Lihat Detail",
       proj_flomartmobile_desc: "Aplikasi mobile marketplace tanaman berbasis Flutter dengan eksplorasi katalog produk interaktif, keranjang belanja, dan UI responsif modern.",
       proj_flomartweb_desc: "Platform web e-commerce jual beli tanaman terpercaya berbasis Laravel dengan data botani lengkap, transaksi aman, dan tampilan responsif.",
+      proj_inlife_desc: "Sistem manajemen inventaris berbasis web dengan Laravel dan MySQL, dilengkapi kontrol akses multi-role (Admin, Manager, Staff, Employee), dashboard monitoring stok, pelaporan, dan deployment Railway.",
       proj_kokinaja_desc: "Desain antarmuka mobile & prototipe interaktif yang memprioritaskan aksesibilitas, alur pemesanan intuitif, dan hierarki visual yang bersih.",
       proj_takakurakit_desc: "Prototipe platform digital berkelanjutan untuk pembelian alat kompos metode Takakura dengan edukasi ramah lingkungan dan pengalaman UX yang memikat.",
       proj_jwmarriot_desc: "Aplikasi desktop reservasi hotel dan manajemen alokasi kamar yang dikembangkan menggunakan Java GUI dan basis data transaksional MySQL.",
@@ -354,6 +356,29 @@
       ],
       tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "JavaScript"],
       github: "https://github.com/Titaniakaylife24/FLOMART-uas.git",
+      prototype: null
+    },
+
+    inlife: {
+      title: "InLife Inventory Management System",
+      category: "Full-Stack Web Application • 2026",
+      category_id: "Aplikasi Web Full-Stack • 2026",
+      desc_en: "A web-based inventory management system developed as a Fullstack Web Developer at Information Systems, UPN “Veteran” Jawa Timur. Built with Laravel, MySQL, and Tailwind CSS, and deployed on Railway to manage product data, stock movement, role-based access, and operational reporting.",
+      desc_id: "Sistem manajemen inventaris berbasis web yang dikembangkan sebagai Fullstack Web Developer di Sistem Informasi UPN “Veteran” Jawa Timur. Dibangun menggunakan Laravel, MySQL, dan Tailwind CSS serta di-deploy pada platform cloud Railway untuk mengelola data produk, pergerakan stok, hak akses berbasis peran, dan pelaporan operasional.",
+      features_en: [
+        "Developed a web-based inventory management system using Laravel and MySQL to manage product data, stock movement, and user access control.",
+        "Implemented role-based authentication and authorization features for Admin, Manager, Staff, and Employee users.",
+        "Designed responsive dashboard interfaces with inventory monitoring, reporting features, and data visualization to improve operational efficiency.",
+        "Deployed and configured the application on Railway cloud platform for online accessibility."
+      ],
+      features_id: [
+        "Mengembangkan sistem manajemen inventaris berbasis web menggunakan Laravel dan MySQL untuk mengelola data produk, pergerakan stok, dan kontrol akses pengguna.",
+        "Mengimplementasikan fitur autentikasi dan otorisasi berbasis peran (role-based) untuk pengguna Admin, Manager, Staff, dan Employee.",
+        "Merancang antarmuka dashboard responsif dengan fitur monitoring inventaris, pelaporan, dan visualisasi data guna meningkatkan efisiensi operasional.",
+        "Melakukan deployment dan konfigurasi aplikasi pada platform cloud Railway agar mudah diakses secara online."
+      ],
+      tech: ["Laravel", "MySQL", "Tailwind CSS", "PHP", "Railway"],
+      github: "https://github.com/Titaniakaylife24/inlife-inventory-management-system.git",
       prototype: null
     },
 
